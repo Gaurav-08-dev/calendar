@@ -1,0 +1,112 @@
+.leave-calendar-content {
+  width: 100%;
+  height: 97.4vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2d2d32;
+
+  .dayView-heading {
+    display: flex;
+    width: 100%;
+
+    .isToday {
+      background-color: rgb(110, 108, 108);
+      span {
+        margin-left: 3px;
+      }
+    }
+
+    .day {
+      min-width: calc(100% / 7 + 1px);
+      border-right: 1px solid #2d2d32;
+      border-bottom: 1px solid #2d2d32;
+      // background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      line-height: 29px;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  .leave-day-content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 1059px;
+    .publicHoliday {
+      background-color: #0055ffc7;
+      // margin-top: 25px;
+
+      .publicHoliday-name {
+        color: white;
+        text-align: center;
+      }
+    }
+    .day-content {
+      min-width: calc(100% / 7 + 1px);
+      max-width: calc(100% / 7 + 1px);
+      border-right: 1px solid #2d2d32;
+      padding: 5px;
+      .day-content-inner {
+        height: 100%;
+        overflow-y: auto;
+        padding-bottom: 30px;
+      }
+
+      .floating-leave-tab {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        border-radius: 2px;
+        // background-color: #fff;
+        background-color: #232931;
+        padding: 10px;
+        line-height: 12px;
+        font-weight: 500;
+        gap: 11px;
+
+        transition: all 0.3s;
+
+        + .floating-leave-tab {
+          margin-top: 10px;
+        }
+
+        .floating-leave-user-details-wrapper {
+          #floating-leave-user-id {
+            color: #9b9b9b;
+            line-height: 10px;
+            margin-bottom: 5px;
+            span {
+              color: #fff;
+              margin-left: 4px;
+            }
+          }
+
+          #panelInfo {
+            display: none;
+          }
+          p {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      .floating-leave-tab:hover {
+        cursor: pointer;
+        background-color: #4c596b94;
+      }
+    }
+    .day-content:last-child {
+      border-right: 0;
+    }
+  }
+}
