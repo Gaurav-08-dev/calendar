@@ -42,7 +42,7 @@ export default function WeekView({ ...props }) {
     //   currentEndDate: ''
     // });
 
-    let currentStartDate, currentEndDate;
+    // let currentStartDate, currentEndDate;
 
     const [year, setYearState] = useState({ newYear: new Date().getFullYear(), month: new Date().getMonth() });
 
